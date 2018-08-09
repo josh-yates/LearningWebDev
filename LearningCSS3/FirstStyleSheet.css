@@ -1,4 +1,24 @@
-﻿p{
-    color:dimgray;
-    background-color:aquamarine
+﻿
+/*Affects all paragraphs*/
+p {
+    color: dimgray;
+    background-color: aquamarine
+}
+
+/*Affects every element with id=CustomID. It must be after p
+    otherwise p will overwrite any paragraphs included in CustomID.
+    Elements may only have 1 ID
+*/
+#CustomID {
+    color: ghostwhite;
+    background-color: orangered;
+}
+
+/*Affects every element containing class=CustomClass. The order of classes
+    in the element is irrelevant; the overwriting of styles is dictated by
+    the order the classes appear in the CSS file.
+*/
+#CustomClass{
+    color:darkblue;
+    background-color:cornflowerblue;
 }

@@ -5,9 +5,23 @@
     <title>CSS Learning Site</title>
     <!--Link to the style sheet-->
     <link rel="stylesheet" href="FirstStyleSheet.css" />
+    <!--Internal style-->
+    <style>
+        h2{
+            color:blueviolet;
+            background-color:burlywood;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>Test paragraph.</p>
+    <!--Inline style-->
+    <h1 style="color:forestgreen;background-color:lightcoral">Hello, world! Inline style header</h1>
+    <!--External style-->
+    <p>Test paragraph with external style.</p>
+    <hr />
+    <h2>Internally styled header!</h2>
+    <p>Another test paragraph.</p>
+    <p id="CustomID">This paragraph's style is overidden by the CustomID id</p>
+    <p class="CustomClass">This paragraph's style is overidden by the CustomClass class</p>
 </body>
 </html>
