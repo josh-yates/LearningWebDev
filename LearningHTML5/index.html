@@ -16,10 +16,10 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Aliquam sit amet elit et lectus egestas condimentum at non diam.</strong> 
     Duis dignissim lacus at purus fermentum ultrices. <em>Mauris non feugiat purus.</em> Praesent ac est sit amet nisi hendrerit scelerisque at nec nisl. 
     Ut elit mauris, porta in sapien a, finibus mollis eros. Mauris venenatis hendrerit tempor. In hac habitasse platea dictumst. 
-    Ut sodales metus lectus, nec dignissim lacus pretium a. Donec eget nunc laoreet, lacinia eros nec, tempor ligula. 
+    Ut sodales metus lectus, nec dignissim lacus pretium a. <u>Donec eget nunc laoreet, lacinia eros nec, tempor ligula.</u> 
     Vestibulum aliquet eros enim, sit amet convallis nisi venenatis nec. Sed suscipit tellus at malesuada porta. 
     Ut pulvinar eu odio non euismod. Vivamus quis magna egestas, luctus elit eu, tristique mauris. Fusce congue scelerisque ultrices. 
-    Suspendisse lobortis, nunc non finibus tincidunt, risus magna rutrum risus, eget semper metus sem ac urna.</p>
+    Suspendisse lobortis, nunc non finibus tincidunt, risus magna rutrum risus, <s>eget semper metus sem ac urna.</s></p>
     <p>This is the second paragraph. Click <a href="https://www.google.co.uk/">here</a> to open google in this tab. Or click <a href="https://www.google.co.uk/" target="_blank">here</a>
     to open google in a new tab.</p>
     <!--Lists-->
@@ -60,5 +60,55 @@
             </tr>
         </tbody>
     </table>
+    <hr />
+    <div style="background-color: green">
+        <table border="1">
+            <tbody>
+                <!--Styling should be done in CSS, this is to demonstrate basic colouring-->
+                <tr>
+                    <td bgcolor="blue" colspan="2">Blue</td>
+                </tr>
+                <tr>
+                    <td bgcolor="red">Red</td>
+                    <td bgcolor="yellow">Yellow</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr />
+    <form method="get">
+        Username
+        <input type="text" name="Username" />
+        Male
+        <input type="radio" name="Gender" value="Male"/>
+        Female
+        <input type="radio" name="Gender" value="Female" />
+        Other
+        <input type="radio" name="Gender" value="Other" />
+        <br />
+        Password
+        <input type="password" name="Password" />
+        I like cats
+        <input type="checkbox" name="PetSurvey" value="LikesCats" />
+        I like dogs
+        <input type="checkbox" name="PetSurvey" value="LikesDogs" />
+        <br />
+        Favourite Integer
+        <input type="number" name="FaveInt" />
+        Date of Birth
+        <input type="date" name="DOB" />
+        <br />
+        Personal Message
+        <br/>
+        <textarea name="UserMessage"></textarea>
+        <input type="submit" value="Send" />
+    </form>
+    <hr />
+    <h3>iFrame and image example</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151986.00551913772!2d-2.363546027756835!3d53.47236790458767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2sManchester!5e0!3m2!1sen!2suk!4v1533826031056" 
+            width="300" height="300" allowfullscreen>
+        iFrame not supported!
+    </iframe>
+    <img src="https://images.pexels.com/photos/209037/pexels-photo-209037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" height="300" width="504"/>
 </body>
 </html>
