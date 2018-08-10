@@ -1,24 +1,47 @@
 ﻿
 /*Affects all paragraphs*/
 p {
+    font-family: 'Times New Roman', Times, serif;
     color: dimgray;
-    background-color: aquamarine
+    background-color: aquamarine;
 }
 
 /*Affects every element with id=CustomID. It must be after p
     otherwise p will overwrite any paragraphs included in CustomID.
-    Elements may only have 1 ID
+    Elements may only have 1 ID. Use IDs for identifying important elements eg a button.
+    IDs can also be searched for using #idname in the url
 */
 #CustomID {
-    color: ghostwhite;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-variant:small-caps;
+    /*can also use 0-255 for rgb values*/
+    color: rgba(100%,100%,100%,0.5);
     background-color: orangered;
 }
 
 /*Affects every element containing class=CustomClass. The order of classes
     in the element is irrelevant; the overwriting of styles is dictated by
     the order the classes appear in the CSS file.
+    Use classes to group similar elements eg buttons might have a shared style.
 */
-#CustomClass{
+.CustomClass{
+    /*font size can be in px, em (relative size) or xx-small etc.*/
+    font-size:2em;
+    font-style:italic;
+    /*font weight can also be number 100-900*/
+    font-weight:bold;
+    text-align:right;
     color:darkblue;
     background-color:cornflowerblue;
+}
+
+/*Target only paragraphs inside id=DivId*/
+#DivId p{
+    font-family:'Courier New', Courier, monospace;
+    font-size:5em;
+    color:white;
+    background-color:dimgrey;
+    font-weight:800;
+    /*Can use multiple shadows to make cool effects*/
+    text-shadow:-5px 5px 0px grey;
 }
