@@ -1,4 +1,6 @@
-﻿
+﻿body{
+    background-color:cadetblue;
+}
 /*Affects all paragraphs*/
 p {
     font-family: 'Times New Roman', Times, serif;
