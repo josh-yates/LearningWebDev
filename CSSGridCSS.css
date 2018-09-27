@@ -1,3 +1,174 @@
-﻿body
-{
+﻿@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
+body
+{	
+    --sea-twilight: rgb(76, 49, 81);
+    --sea-royal: rgb(99, 56, 108);
+    --sea-stormy: rgb(87, 75, 108);
+    --sea-deep-water: rgb(68, 125, 145);
+    --sea-lagoon: rgb(58, 164, 162);
+
+    background-color: var(--sea-stormy);
+}
+
+/*Mobile browser view*/
+.Grid {
+    display: grid;
+    grid-template-areas: "Logo" 
+        "NavBar" 
+        "ContentLeft" 
+        "ContentRight"
+        "Footer";
+}
+
+#Logo {
+    grid-area: Logo;
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+    color: var(--sea-lagoon);
+    text-shadow: -1px 1px 0px var(--sea-deep-water),
+        -2px 2px 0px var(--sea-deep-water),
+        -3px 3px 0px var(--sea-deep-water), 
+        -8px 8px 0px var(--sea-royal);
+    padding-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+#ContentRight{
+    grid-area: ContentRight;
+    background-color: var(--sea-twilight);
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#Footer {
+    grid-area: Footer;
+    background-color: var(--sea-lagoon)
+}
+
+
+.NavBar {
+    grid-area: NavBar;
+    background-color: var(--sea-deep-water);
+    border-radius: 10px;
+    /*Also a grid of buttons*/
+    display: grid;
+    grid-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right:10px;
+    /*padding-top: 20px;
+    padding-bottom: 20px;*/
+    grid-template-areas: "HomeButton" 
+        "AboutButton" 
+        "StoriesButton" 
+        "PhotosButton" 
+        "ContactButton";
+}
+
+/*NavButton is the container inside the grid*/
+.NavButton {
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 1.4em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--sea-lagoon);
+    color: var(--sea-twilight);
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 45%;
+}
+
+.NavButton:any-link {
+    color: var(--sea-twilight);
+}
+
+.NavButton:hover{
+    background-color: var(--sea-twilight);
+    color: var(--sea-lagoon);
+}
+
+#HomeButton{
+    grid-area: HomeButton;
+}
+
+#AboutButton {
+    grid-area: AboutButton;
+}
+#StoriesButton {
+    grid-area: StoriesButton;
+}
+#PhotosButton {
+    grid-area: PhotosButton;
+}
+#ContactButton {
+    grid-area: ContactButton;
+}
+
+#ContentLeft {
+    margin-top: 20px;
+    grid-area: ContentLeft;
+    background-color: var(--sea-deep-water);
+    display: grid;
+    grid-template-areas: "Image1" "Image2" "Image3" "Image4";
+    grid-gap: 10px;
+}
+
+.ContentLeftImg{
+    position: center;
+    background-image: url("pelican.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 200px;
+    min-height: 150px;
+    max-width: 200px;
+    max-height: 150px;
+    background-size: contain;
+    border-style: solid;
+}
+
+#Image1{
+    grid-area: Image1;
+}
+
+#Image2{
+    grid-area: Image2;
+}
+
+#Image3{
+    grid-area: Image3;
+}
+
+#Image4{
+    grid-area: Image4;
+}
+
+/*When screen larger than 736px, use desktop stuff*/
+@media screen and (min-width: 600px){
+    .Grid {
+        display: grid;
+        grid-template-areas: "Logo Logo" 
+            "NavBar NavBar" 
+            "ContentLeft ContentRight" 
+            "Footer Footer";
+    }
+
+    .NavBar {
+        grid-template-areas: "HomeButton AboutButton StoriesButton PhotosButton ContactButton";
+    }
+
+    #ContentLeft {
+        grid-template-areas: "Image1 Image2" "Image3 Image4";
+    }
+
+    #Logo{
+        font-size: 6em;
+    }
 }
